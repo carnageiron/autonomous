@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Track.msg"
   "msg/Path.msg"
   "msg/Control.msg"
+  "msg/Pose2D.msg"
   DEPENDENCIES geometry_msgs
 )
 if(BUILD_TESTING)
