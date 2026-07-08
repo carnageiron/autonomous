@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Cone.msg"
   "msg/ConeArray.msg"
@@ -15,7 +16,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Path.msg"
   "msg/Control.msg"
   "msg/Pose2D.msg"
-  DEPENDENCIES geometry_msgs
+  "msg/AutonomousState.msg"
+  "msg/Mission.msg"
+  "msg/Heartbeat.msg"
+  "msg/EmergencyStop.msg"
+  DEPENDENCIES geometry_msgs std_msgs
 )
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
