@@ -1,0 +1,7 @@
+# ROS2 generated folders
+build/
+install/
+log/
+
+# Docker files
+docker/
